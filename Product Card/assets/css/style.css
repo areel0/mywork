@@ -3,12 +3,12 @@
 
 --first-color:#f2a20c;
 --white-color:#000000;
---dark-color:#b33131;
+--dark-color:#832d2d;
 --dark-color-lighten:#464141;
 
 --body-font:'Pathway Gothic One', sans-serif;
 --h1-font-size: 1.5rem;
---h2-font-size: 1.25rem;
+--h2-font-size: 1.5rem;
 --normal-font-size: 1rem;
 --small-font-size: 0.875;
 }
@@ -45,28 +45,33 @@ img{
 
 .ProductCard{
 width: 320px;
-height: 400px;
+height: 420px;
 background-color: var(--dark-color);
 border-radius: 1rem;
 padding:4rem 2rem 0;
 color: var(--white-color);
-overflow-y: hidden;
+/* overflow-y: hidden; */
 }
 .shoeImage{
     position: absolute;
     width: 220px;
     filter: drop-shadow(5px 10px 15px rgba(8,9,13,.4));
+    
 }
 .cardData{
 transform: translateY(13.2rem);
-text-align: center;
+/* text-align: center; */
+margin-bottom: 8rem;
 }
 .cardTitle{
 font-size: var(--h1-font-size);
 color: var(--first-color);
-margin-bottom: .5rem;
+margin-bottom: 2rem;
+text-align: center;
+
 }
 .cardPrice{
+  /* text-align: center; */
 display: inline-block;
 font-size: var(--h2-font-size);
 font-weight: 500;
@@ -75,7 +80,7 @@ margin-bottom: 1.25rem;
 .cardDescription{
     font-size: var(--small-font-size);
     text-align: initial;
-    margin-bottom: 1.25rem;
+    margin-bottom: -0.5rem;
     opacity: 0;
 }
 .cardButton{
@@ -88,6 +93,7 @@ margin-bottom: 1.25rem;
     font-weight: 600;
     transition: .2s;
     opacity: 0;
+    text-align: center;
 }
 .cardButton:hover{
 box-shadow: 0 18px 40px -12px rgba(242,162,12,.35);    
@@ -100,24 +106,31 @@ box-shadow: 0 18px 40px -12px rgba(242,162,12,.35);
     transition: .5s;
 }
 .ProductCard:hover .shoeImage {
-    transform: translate(-1.5rem, -9.5rem) rotate(-20deg);
+    transform: translate(-1.5rem, -9.5rem) rotate(-40deg);
   }
   
   .ProductCard:hover .cardData {
-    transform: translateY(4.8rem);
+    transform: translateY(7rem);
   }
   
   .ProductCard:hover .cardTitle {
-    transform: translateX(-2.3rem);
-    margin-bottom: 0;
+    transform: translateX(-0.3rem);
+    margin-bottom: 1rem;
   }
   
   .ProductCard:hover .cardPrice {
-    transform: translateX(-6.8rem);
+    transform: translateX(6.3rem);
+    
   }
   
-  .ProductCard:hover .cardDescription, 
+  .ProductCard:hover .cardDescription
+  {
+    transition-delay: .2s;
+    opacity: 1;
+    transform: translateX(0.9rem);
+  }
   .ProductCard:hover .cardButton {
     transition-delay: .2s;
     opacity: 1;
+    transform: translateX(4.7rem);
   }
